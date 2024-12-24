@@ -7516,4 +7516,4 @@ type Yoda = []|[("always" | "never")]|[("always" | "never"), {
   onlyEquality?: boolean
 }]
 // Names of all the configs
-export type ConfigNames = 'we-use/javascript/rules' | 'we-use/node/rules' | 'we-use/stylistic/rules' | 'we-use/typescript/plugins' | 'we-use/typescript/parsers' | 'we-use/typescript/rules' | 'we-use/react/rules' | 'we-use/nextjs/rules'
+export type ConfigNames = 'bluzzi/javascript/rules' | 'bluzzi/node/rules' | 'bluzzi/stylistic/rules' | 'bluzzi/typescript/plugins' | 'bluzzi/typescript/parsers' | 'bluzzi/typescript/rules' | 'bluzzi/react/rules' | 'bluzzi/nextjs/rules'

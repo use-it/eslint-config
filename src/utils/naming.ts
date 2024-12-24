@@ -1,4 +1,4 @@
-export const configName = (name: string, category: "rules" | "parsers" | "plugins"): string => `we-use/${name}/${category}`;
+export const configName = (name: string, category: "rules" | "parsers" | "plugins"): string => `bluzzi/${name}/${category}`;
 
 /**
  * Rename plugin prefixes in a rule object.
