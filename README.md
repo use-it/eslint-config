@@ -1,4 +1,4 @@
-# @we-use/eslint-config
+# @bluzzi/eslint-config
 A ready-to-use ESLint config preset that's highly opinionated and strict on best practices, allowing you to both lint and [format](https://eslint.style/guide/why) any file that can be used in the JavaScript ecosystem.
 
 - 📖 formatting (Prettier alternative) with only basic configurations (semi, quotes, indent)
@@ -14,19 +14,19 @@ Installing the config preset in your project.
 
 ### Packages
 ```
-npm install -D eslint @we-use/eslint-config
+npm install -D eslint @bluzzi/eslint-config
 ```
 ```
-yarn add --dev eslint @we-use/eslint-config
+yarn add --dev eslint @bluzzi/eslint-config
 ```
 ```
-pnpm install -D eslint @we-use/eslint-config
+pnpm install -D eslint @bluzzi/eslint-config
 ```
 
 ### Configuration file
 Create the `eslint.config.mjs` file at the root of the project and add the minimum configuration:
 ```js
-import { eslintConfig } from "@we-use/eslint-config";
+import { eslintConfig } from "@bluzzi/eslint-config";
 
 export default eslintConfig();
 ```
