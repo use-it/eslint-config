@@ -1,5 +1,5 @@
 {
-  "name": "@we-use/eslint-config",
+  "name": "@bluzzi/eslint-config",
   "type": "module",
   "version": "1.3.0",
   "main": "./dist/index.cjs",
