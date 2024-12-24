@@ -1,21 +1,32 @@
-/* eslint-disable ts/no-unsafe-assignment */
+/* eslint-disable ts/no-unsafe-assignment, ts/no-unsafe-member-access */
 
 import type { TypedFlatConfigItem } from "#/types/type";
-import { nextjsPlugin } from "#/utils/extension";
+import { reactHooksPlugin, reactPlugin } from "#/utils/extension";
 import { configName } from "#/utils/naming";
-
-// TODO: https://github.com/antfu/eslint-config/blob/main/src/configs/react.ts
-// TODO: https://github.com/we-use/eslint-config/issues/13
 
 export const react = (): TypedFlatConfigItem[] => {
   return [
     {
-      name: configName("nextjs", "rules"),
+      name: configName("react", "rules"),
       files: ["**/*.ts", "**/*.tsx"],
       plugins: {
-        node: nextjsPlugin,
+        "react": reactPlugin.configs.all.plugins["@eslint-react"],
+        "react-dom": reactPlugin.configs.all.plugins["@eslint-react/dom"],
+        "react-hooks": reactHooksPlugin,
+        "react-hooks-extra": reactPlugin.configs.all.plugins["@eslint-react/hooks-extra"],
+        "react-naming-convention": reactPlugin.configs.all.plugins["@eslint-react/naming-convention"],
+      },
+      languageOptions: {
+        parserOptions: {
+          ecmaFeatures: {
+            jsx: true,
+          },
+        },
+        sourceType: "module",
       },
       rules: {
+        ...reactPlugin.configs.recommended.rules,
+        ...reactHooksPlugin.configs.recommended.rules,
       },
     },
   ];

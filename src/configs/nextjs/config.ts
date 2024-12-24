@@ -11,7 +11,7 @@ export const nextjs = (): TypedFlatConfigItem[] => {
       name: configName("nextjs", "rules"),
       files: ["**/*.ts", "**/*.tsx"],
       plugins: {
-        node: nextjsPlugin,
+        nextjs: nextjsPlugin,
       },
       rules: {
         ...nextjsPlugin.configs.recommended.rules,
