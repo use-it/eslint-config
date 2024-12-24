@@ -43,7 +43,7 @@ export const eslintConfig = async (
 
   // Stylistic:
   logger.info("stylistic - config enabled");
-  configs.push(stylistic(options.stylistic));
+  configs.push(stylistic({ ...options.stylistic, jsx: enabled.react }));
 
   // React:
   if (enabled.react) {

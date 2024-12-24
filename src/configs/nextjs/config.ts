@@ -14,6 +14,7 @@ export const nextjs = (): TypedFlatConfigItem[] => {
         nextjs: nextjsPlugin,
       },
       rules: {
+        // https://github.com/vercel/next.js/blob/7a47ed5123b8dac03e9483cb823e224370da2667/packages/eslint-plugin-next/src/index.ts#L26
         ...nextjsPlugin.configs.recommended.rules,
         ...nextjsPlugin.configs["core-web-vitals"].rules,
       },

@@ -22,4 +22,11 @@ export type ParamsStylistic = {
    * @default true
    */
   semi?: boolean;
+
+  /**
+   * Whether to enable JSX
+   *
+   * @default false - enabled if "react" package is found
+   */
+  jsx?: boolean;
 };
