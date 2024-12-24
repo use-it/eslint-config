@@ -13,7 +13,7 @@ import { react } from "#/configs/react";
 
 export const eslintConfig = async (
   options: OptionsConfig = {},
-  ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.FlatConfig[]>[]
+  ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
 ): Promise<FlatConfigComposer<TypedFlatConfigItem, ConfigNames>> => {
   const configs: (TypedFlatConfigItem[])[] = [];
 

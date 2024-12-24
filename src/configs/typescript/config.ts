@@ -5,7 +5,7 @@ import { configName, renameRules } from "#/utils/naming";
 import { cwd } from "node:process";
 
 export const typescript = ({ tsconfigPath }: ParamsTS = {}): TypedFlatConfigItem[] => {
-  const isTypeChecked = Boolean(tsconfigPath);
+  const isTypeChecked = typeof tsconfigPath !== "undefined";
 
   const recommendedRules = isTypeChecked
     ? renameRules(typescriptPlugin.configs["strict-type-checked"]?.rules ?? [], { "@typescript-eslint": "ts" })
@@ -24,7 +24,12 @@ export const typescript = ({ tsconfigPath }: ParamsTS = {}): TypedFlatConfigItem
       name: configName("typescript", "parsers"),
       languageOptions: {
         parser: typescriptParser,
-        parserOptions: isTypeChecked ? { project: tsconfigPath, tsconfigRootDir: cwd() } : {},
+        parserOptions: isTypeChecked
+          ? {
+              projectService: { allowDefaultProject: ["eslint.config.js"], defaultProject: tsconfigPath },
+              tsconfigRootDir: cwd(),
+            }
+          : {},
       },
     },
     {
