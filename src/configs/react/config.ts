@@ -27,6 +27,7 @@ export const react = (): TypedFlatConfigItem[] => {
       rules: {
         ...reactPlugin.configs.recommended.rules,
         ...reactHooksPlugin.configs.recommended.rules,
+        "react-hooks/exhaustive-deps": "off",
       },
     },
   ];
