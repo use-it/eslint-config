@@ -50,7 +50,7 @@ export const typescript = ({ tsconfigPath }: ParamsTS = {}): TypedFlatConfigItem
         "ts/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_", caughtErrorsIgnorePattern: "^_" }],
         "no-use-before-define": "off",
         "ts/no-use-before-define": ["error", { classes: false, functions: false, variables: true }],
-        "ts/explicit-function-return-type": ["error", { allowExpressions: true }],
+        // "ts/explicit-function-return-type": ["error", { allowExpressions: true }], // TODO: really effective? It's often annoying on the frontend.
         "ts/explicit-member-accessibility": "error",
         "ts/explicit-module-boundary-types": "error",
         "ts/no-invalid-void-type": "off", // TODO: for undefined generics types (temporary?)
