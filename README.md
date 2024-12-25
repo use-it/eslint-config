@@ -7,7 +7,7 @@ A ready-to-use ESLint config preset that's highly opinionated and strict on best
 - ✅ automatically enables specific rules based on your dependencies
 - 🧲 uses the recommended shared configs (ESLint, TSLint, Stylistic...)
 
-If you're looking for a less opinionated configuration with more customization possibilities, we recommend the [Antfu preset](https://github.com/antfu/eslint-config).
+If you're looking for a less opinionated configuration with more customization possibilities, I recommend you the [Antfu preset](https://github.com/antfu/eslint-config).
 
 ## Installation
 Installing the config preset in your project.
