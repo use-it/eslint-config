@@ -66,6 +66,10 @@ export const eslintConfig = async (
     "@stylistic": "style",
     "@typescript-eslint": "ts",
     "n": "node",
+    "@eslint-react": "react", // TODO: regroup all the react rules?
+    "@eslint-react/hooks": "react-hooks",
+    "@eslint-react/hooks-extra": "react-hooks-extra",
+    "@eslint-react/naming-convention": "react-naming-convention",
   });
 
   return composer;
