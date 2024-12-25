@@ -1,4 +1,5 @@
-/* eslint-disable ts/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from "#/types/type";
 import type { Linter } from "eslint";
@@ -17,7 +18,7 @@ export const eslintConfig = async (
   options: OptionsConfig = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
 ): Promise<FlatConfigComposer<TypedFlatConfigItem, ConfigNames>> => {
-  const configs: (TypedFlatConfigItem[])[] = [];
+  const configs: TypedFlatConfigItem[] = [];
 
   const enabled = {
     typescript: isPackageExists("typescript"),
@@ -61,23 +62,7 @@ export const eslintConfig = async (
 
   // Compose:
   const composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>();
-
-  // eslint-disable-next-line ts/no-unsafe-argument
-  void composer.append(...configs, ...userConfigs as any);
-  void composer.renamePlugins({
-    "@stylistic": "style",
-    "@typescript-eslint": "ts",
-    "n": "node",
-
-    "@next/next": "next",
-
-    "@eslint-react/naming-convention": "react-naming-convention",
-    "@eslint-react/hooks-extra": "react-hooks-extra",
-    "@eslint-react/dom": "react-dom",
-    "@eslint-react": "react",
-
-    "react-hooks": "react-hooks", // maybe good for consistency
-  });
+  await composer.append(...configs, ...userConfigs as any);
 
   return composer;
 };

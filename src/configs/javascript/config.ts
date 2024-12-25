@@ -1,13 +1,10 @@
 import type { TypedFlatConfigItem } from "#/types/type";
-import { configName } from "#/utils/naming";
 import globals from "globals";
 import js from "@eslint/js";
 
-export const javascript = (): TypedFlatConfigItem[] => {
-  const recommendedRules = js.configs.recommended.rules;
-
-  return [{
-    name: configName("javascript", "rules"),
+export const javascript = (): TypedFlatConfigItem => {
+  return {
+    name: "bluzzi/javascript",
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -25,7 +22,7 @@ export const javascript = (): TypedFlatConfigItem[] => {
       reportUnusedDisableDirectives: true,
     },
     rules: {
-      ...recommendedRules,
+      ...js.configs.recommended.rules,
       "array-callback-return": "error",
       "no-await-in-loop": "error",
       "no-constructor-return": "error",
@@ -91,5 +88,5 @@ export const javascript = (): TypedFlatConfigItem[] => {
       "require-unicode-regexp": "error",
       "yoda": "error",
     },
-  }];
+  };
 };

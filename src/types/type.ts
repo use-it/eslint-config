@@ -1,4 +1,4 @@
-/* eslint-disable ts/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type { Linter } from "eslint";
 import type { ConfigNames, RuleOptions } from "./gen";
@@ -12,6 +12,8 @@ export type Rules = RuleOptions;
 export type { ConfigNames };
 
 export type TypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>, "plugins"> & {
+  name: `bluzzi/${string}`;
+
   /**
    * An object containing a name-value mapping of plugin names to plugin objects.
    * When `files` is specified, these plugins are only available to the matching files.
