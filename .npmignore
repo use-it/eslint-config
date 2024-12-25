@@ -8,3 +8,6 @@ Dockerfile
 # Configs:
 eslint.config.js
 tsconfig.json
+
+# GitHub:
+.github
