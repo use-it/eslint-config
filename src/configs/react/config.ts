@@ -4,7 +4,7 @@ import { configName, renameRules } from "#/utils/naming";
 
 export const react = (): TypedFlatConfigItem[] => {
   const recommendedRules = renameRules(
-    reactPlugin.configs.recommended,
+    reactPlugin.configs.recommended.rules,
     {
       "@eslint-react": "react",
       "@eslint-react/dom": "react-dom",
