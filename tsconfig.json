@@ -1,16 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ES2022",
-
-    "moduleResolution": "Bundler",
-
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-
+    /* Base Options: */
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "target": "ES2024",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
 
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* If NOT transpiling with TypeScript: */
+    "module": "preserve",
+    "noEmit": true,
+
+    /* If your code doesn't run in the DOM: */
+    "lib": ["es2022"],
+
+    /* Custom paths: */
     "baseUrl": ".",
     "paths": {
       "#/*": ["./src/*"]
