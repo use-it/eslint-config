@@ -1857,16 +1857,6 @@ export interface RuleOptions {
    */
   'react-hooks-extra/prefer-use-state-lazy-initialization'?: Linter.RuleEntry<[]>
   /**
-   * verifies the list of dependencies for Hooks like useEffect and similar
-   * @see https://github.com/facebook/react/issues/14920
-   */
-  'react-hooks/exhaustive-deps'?: Linter.RuleEntry<ReactHooksExhaustiveDeps>
-  /**
-   * enforces the Rules of Hooks
-   * @see https://reactjs.org/docs/hooks-rules.html
-   */
-  'react-hooks/rules-of-hooks'?: Linter.RuleEntry<[]>
-  /**
    * enforce component naming convention to 'PascalCase' or 'CONSTANT_CASE'
    * @see https://eslint-react.xyz/docs/rules/naming-convention-component-name
    */
@@ -5093,11 +5083,6 @@ type Radix = []|[("always" | "as-needed")]
 type ReactDomNoUnknownProperty = []|[{
   ignore?: string[]
   requireDataLowercase?: boolean
-}]
-// ----- react-hooks/exhaustive-deps -----
-type ReactHooksExhaustiveDeps = []|[{
-  additionalHooks?: string
-  enableDangerousAutofixThisMayCauseInfiniteLoops?: boolean
 }]
 // ----- react-naming-convention/component-name -----
 type ReactNamingConventionComponentName = []|[(("PascalCase" | "CONSTANT_CASE") | {

@@ -3,9 +3,19 @@
 
 import type { TypedFlatConfigItem } from "#/types/type";
 import { nextjsPlugin } from "#/utils/extension";
-import { configName } from "#/utils/naming";
+import { configName, renameRules } from "#/utils/naming";
 
 export const nextjs = (): TypedFlatConfigItem[] => {
+  const recommendedRules = renameRules(
+    nextjsPlugin.configs.recommended.rules as Record<string, string>,
+    { "@next/next": "nextjs" },
+  );
+
+  const recommendedCoreRules = renameRules(
+    nextjsPlugin.configs["core-web-vitals"].rules as Record<string, string>,
+    { "@next/next": "nextjs" },
+  );
+
   return [
     {
       name: configName("nextjs", "rules"),
@@ -15,8 +25,8 @@ export const nextjs = (): TypedFlatConfigItem[] => {
       },
       rules: {
         // https://github.com/vercel/next.js/blob/7a47ed5123b8dac03e9483cb823e224370da2667/packages/eslint-plugin-next/src/index.ts#L26
-        ...nextjsPlugin.configs.recommended.rules,
-        ...nextjsPlugin.configs["core-web-vitals"].rules,
+        ...recommendedRules,
+        ...recommendedCoreRules,
       },
     },
   ];

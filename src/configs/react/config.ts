@@ -1,8 +1,18 @@
 import type { TypedFlatConfigItem } from "#/types/type";
 import { reactPlugin } from "#/utils/extension";
-import { configName } from "#/utils/naming";
+import { configName, renameRules } from "#/utils/naming";
 
 export const react = (): TypedFlatConfigItem[] => {
+  const recommendedRules = renameRules(
+    reactPlugin.configs.recommended,
+    {
+      "@eslint-react": "react",
+      "@eslint-react/dom": "react-dom",
+      "@eslint-react/hooks-extra": "react-hooks-extra",
+      "@eslint-react/naming-convention": "react-naming-convention",
+    },
+  );
+
   return [
     {
       name: configName("react", "rules"),
@@ -22,7 +32,7 @@ export const react = (): TypedFlatConfigItem[] => {
         sourceType: "module",
       },
       rules: {
-        ...reactPlugin.configs.recommended.rules,
+        ...recommendedRules,
       },
     },
   ];

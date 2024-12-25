@@ -1,3 +1,5 @@
+/* eslint-disable ts/no-explicit-any */
+
 export const configName = (name: string, category: "rules" | "parsers" | "plugins"): string => `bluzzi/${name}/${category}`;
 
 /**
@@ -18,7 +20,7 @@ export const configName = (name: string, category: "rules" | "parsers" | "plugin
  * }]
  * ```
  */
-export const renameRules = (rules: Record<string, any>, map: Record<string, string>): Record<string, string> => {
+export const renameRules = (rules: Record<string, any>, map: Record<string, string>): Record<string, any> => {
   return Object.fromEntries(
     Object.entries(rules)
       .map(([key, value]) => {

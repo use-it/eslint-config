@@ -1,3 +1,5 @@
+/* eslint-disable ts/no-explicit-any */
+
 import type { Linter } from "eslint";
 import type { ConfigNames, RuleOptions } from "./gen";
 import type { ParamsTS } from "#/configs/typescript";

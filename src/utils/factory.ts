@@ -1,3 +1,5 @@
+/* eslint-disable ts/no-explicit-any */
+
 import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from "#/types/type";
 import type { Linter } from "eslint";
 import { isPackageExists } from "local-pkg";
@@ -67,10 +69,14 @@ export const eslintConfig = async (
     "@typescript-eslint": "ts",
     "n": "node",
 
+    "@next/next": "next",
+
     "@eslint-react": "react",
     "@eslint-react/dom": "react-dom",
     "@eslint-react/hooks-extra": "react-hooks-extra",
     "@eslint-react/naming-convention": "react-naming-convention",
+
+    "react-hooks": "react-hooks", // maybe good for consistency
   });
 
   return composer;
