@@ -1,0 +1,10 @@
+# Project:
+src
+scripts
+
+# Dockerfile:
+Dockerfile
+
+# Configs:
+eslint.config.js
+tsconfig.json

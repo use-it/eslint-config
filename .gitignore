@@ -1,3 +1,26 @@
-node_modules
-dist
+# Idea IDE:
+**/.idea/
+
+# Package lock (except for PNPM):
+**/yarn.lock
+**/package-lock.json
+**/bun.lockb
+
+# Packages:
+**/node_modules
+
+# Environment variables and secrets files:
+**/.env*
+
+# ESLint Inspector:
 .eslint-config-inspector
+
+# Builds:
+**/build
+**/dist
+
+# TS:
+**/*.tsbuildinfo
+
+# MacOS
+**/.DS_Store
