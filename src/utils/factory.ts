@@ -71,10 +71,10 @@ export const eslintConfig = async (
 
     "@next/next": "next",
 
-    "@eslint-react": "react",
-    "@eslint-react/dom": "react-dom",
-    "@eslint-react/hooks-extra": "react-hooks-extra",
     "@eslint-react/naming-convention": "react-naming-convention",
+    "@eslint-react/hooks-extra": "react-hooks-extra",
+    "@eslint-react/dom": "react-dom",
+    "@eslint-react": "react",
 
     "react-hooks": "react-hooks", // maybe good for consistency
   });

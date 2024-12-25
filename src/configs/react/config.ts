@@ -6,10 +6,10 @@ export const react = (): TypedFlatConfigItem[] => {
   const recommendedRules = renameRules(
     reactPlugin.configs.recommended.rules,
     {
-      "@eslint-react": "react",
-      "@eslint-react/dom": "react-dom",
-      "@eslint-react/hooks-extra": "react-hooks-extra",
       "@eslint-react/naming-convention": "react-naming-convention",
+      "@eslint-react/hooks-extra": "react-hooks-extra",
+      "@eslint-react/dom": "react-dom",
+      "@eslint-react": "react",
     },
   );
 
