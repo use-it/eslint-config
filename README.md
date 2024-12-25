@@ -94,7 +94,7 @@ Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?it
 To enable TS [type aware rules](https://typescript-eslint.io/getting-started/typed-linting) (recommended for best practice with TS), you need to define the relative path to your `tsconfig.json`:
 ```js
 export default eslintConfig({
-  typescript: { tsconfigPath: `./tsconfig.json` },
+  typescript: { tsconfigPath: "./tsconfig.json" },
 });
 ```
 
@@ -103,7 +103,7 @@ You can adjust some formatting options for your code, but we recommend sticking 
 export default eslintConfig({
   stylistic: {
     indent: 2,
-    quotes: 'single',
+    quotes: "single",
     semi: false,
   },
 });
@@ -119,7 +119,7 @@ export default eslintConfig(
   // From the second arguments they are ESLint Flat Configs
   // you can have multiple configs:
   {
-    files: ['**/*.ts'],
+    files: ["**/*.ts"],
     rules: {},
   },
   {
