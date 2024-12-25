@@ -26,7 +26,7 @@ export const typescript = ({ tsconfigPath }: ParamsTS = {}): TypedFlatConfigItem
         parser: typescriptParser,
         parserOptions: isTypeChecked
           ? {
-              projectService: { allowDefaultProject: ["eslint.config.js"], defaultProject: tsconfigPath },
+              projectService: { defaultProject: tsconfigPath },
               tsconfigRootDir: cwd(),
             }
           : {},
