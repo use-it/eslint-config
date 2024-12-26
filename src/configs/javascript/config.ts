@@ -42,7 +42,7 @@ export const javascript = (): TypedFlatConfigItem => {
       "max-classes-per-file": "error",
       "max-depth": "error",
       "max-nested-callbacks": ["error", { max: 3 }],
-      "new-cap": "error",
+      "new-cap": "off", // TODO: Check if this rule is relevant (this can be anoying with React)
       "no-array-constructor": "error",
       "no-caller": "error",
       "no-else-return": "error",
@@ -86,6 +86,7 @@ export const javascript = (): TypedFlatConfigItem => {
       "prefer-template": "error",
       "require-unicode-regexp": "error",
       "yoda": "error",
+      "no-duplicate-imports": "off", // TODO: Check if this rule is relevant
     },
   };
 };
