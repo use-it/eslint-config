@@ -56,6 +56,7 @@ export const typescript = ({ tsconfigPath }: ParamsTS = {}): TypedFlatConfigItem
       "@typescript-eslint/no-non-null-assertion": "off", // TODO: Check if this rule is relevant
       "@typescript-eslint/no-confusing-void-expression": "off", // TODO: Check if this rule is relevant
       "@typescript-eslint/prefer-nullish-coalescing": "off", // TODO: Check if this rule is relevant
+      "@typescript-eslint/no-unnecessary-type-parameters": "off", // TODO: Check if this rule is relevant (not working with `export const jwtDecode = <Payload extends object>(jwt: string): { expirationUnixTimestamp: number } & Payload => {`)
     },
   };
 };
