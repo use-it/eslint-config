@@ -62,13 +62,13 @@ export const javascript = (): TypedFlatConfigItem => {
       "no-multi-str": "error",
       "no-new-func": "error",
       "no-new-wrappers": "error",
-      "no-param-reassign": "error",
+      "no-param-reassign": "off", // TODO: Check if this rule is relevant
       "no-plusplus": "error",
       "no-return-assign": "error",
       "no-script-url": "error",
       "no-sequences": "error",
       "no-undef-init": "error",
-      "no-undefined": "error",
+      "no-undefined": "off", // TODO: Check if this rule is relevant
       "no-unneeded-ternary": "error",
       "no-unused-expressions": "error",
       "no-useless-call": "error",

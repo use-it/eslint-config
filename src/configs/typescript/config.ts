@@ -41,7 +41,7 @@ export const typescript = ({ tsconfigPath }: ParamsTS = {}): TypedFlatConfigItem
       "no-use-before-define": "off",
       "@typescript-eslint/no-use-before-define": ["error", { classes: false, functions: false, variables: true }],
       "@typescript-eslint/explicit-member-accessibility": "error",
-      "@typescript-eslint/explicit-module-boundary-types": "error",
+      "@typescript-eslint/explicit-module-boundary-types": "off", // TODO: Check if this rule is relevant
       "@typescript-eslint/no-invalid-void-type": "off", // TODO: for undefined generics types (temporary?)
       "@typescript-eslint/prefer-enum-initializers": "error",
       "@typescript-eslint/prefer-find": "error",
@@ -51,8 +51,10 @@ export const typescript = ({ tsconfigPath }: ParamsTS = {}): TypedFlatConfigItem
       "@typescript-eslint/require-array-sort-compare": "error",
       "no-return-await": "off",
       "@typescript-eslint/return-await": "error",
-      "@typescript-eslint/strict-boolean-expressions": "error",
+      // "@typescript-eslint/strict-boolean-expressions": "error", // TODO: Check if this rule is relevant
       "@typescript-eslint/no-misused-promises": ["error", { checksVoidReturn: { attributes: false } }], // https://github.com/orgs/react-hook-form/discussions/8622
+      "@typescript-eslint/no-non-null-assertion": "off", // TODO: Check if this rule is relevant
+      "@typescript-eslint/no-confusing-void-expression": "off", // TODO: Check if this rule is relevant
     },
   };
 };
