@@ -15,8 +15,8 @@ importers:
         specifier: ^9.18.0
         version: 9.18.0
       '@next/eslint-plugin-next':
-        specifier: ^15.1.4
-        version: 15.1.4
+        specifier: ^15.1.5
+        version: 15.1.5
       '@stylistic/eslint-plugin':
         specifier: ^2.13.0
         version: 2.13.0(eslint@9.18.0)(typescript@5.7.3)
@@ -55,8 +55,8 @@ importers:
         specifier: ^8.42.3
         version: 8.42.3
       '@types/node':
-        specifier: ^22.10.6
-        version: 22.10.6
+        specifier: ^22.10.7
+        version: 22.10.7
       eslint:
         specifier: ^9.18.0
         version: 9.18.0
@@ -502,8 +502,8 @@ packages:
   '@jsdevtools/ono@7.1.3':
     resolution: {integrity: sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg==}
 
-  '@next/eslint-plugin-next@15.1.4':
-    resolution: {integrity: sha512-HwlEXwCK3sr6zmVGEvWBjW9tBFs1Oe6hTmTLoFQtpm4As5HCdu8jfSE0XJOp7uhfEGLniIx8yrGxEWwNnY0fmQ==}
+  '@next/eslint-plugin-next@15.1.5':
+    resolution: {integrity: sha512-3cCrXBybsqe94UxD6DBQCYCCiP9YohBMgZ5IzzPYHmPzj8oqNlhBii5b6o1HDDaRHdz2pVnSsAROCtrczy8O0g==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -646,8 +646,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.10.6':
-    resolution: {integrity: sha512-qNiuwC4ZDAUNcY47xgaSuS92cjf8JbSUoaKS77bmLG1rU7MlATVSiw/IlrjtIyyskXBZ8KkNfjK/P5na7rgXbQ==}
+  '@types/node@22.10.7':
+    resolution: {integrity: sha512-V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==}
 
   '@typescript-eslint/eslint-plugin@8.20.0':
     resolution: {integrity: sha512-naduuphVw5StFfqp4Gq4WhIBE2gN1GEmMUExpJYknZJdRnc+2gDzB8Z3+5+/Kv33hPQRDGzQO/0opHE72lZZ6A==}
@@ -2219,7 +2219,7 @@ snapshots:
 
   '@jsdevtools/ono@7.1.3': {}
 
-  '@next/eslint-plugin-next@15.1.4':
+  '@next/eslint-plugin-next@15.1.5':
     dependencies:
       fast-glob: 3.3.1
 
@@ -2332,7 +2332,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.10.6':
+  '@types/node@22.10.7':
     dependencies:
       undici-types: 6.20.0
 
